@@ -62,7 +62,8 @@ export interface IMeasure {
         format?: string;
         sort?: IMeasureSort;
         styles?: IVisualizationStyle[];
-        localIdentifier?: string // Used only in AD
+        localIdentifier?: string; // Used only in AD,
+        alias?: string;
     };
 }
 
@@ -76,7 +77,8 @@ export interface ICategory {
         attribute?: string;
         sort?: SortDirection;
         styles?: IVisualizationStyle[];
-        localIdentifier?: string // Used only in AD
+        localIdentifier?: string; // Used only in AD,
+        alias?: string;
     };
 }
 

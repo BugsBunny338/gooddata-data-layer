@@ -131,7 +131,9 @@ function convertMeasureAfm(
     const aggregationProp = measure.measure.aggregation ? { aggregation: measure.measure.aggregation } : {};
     const filters = compact(convertMeasureFilters(measure));
     const filtersProp = filters.length ? { filters } : {};
-    const aliasProp = measure.measure.title ? { alias: measure.measure.title } : {};
+    const aliasProp = measure.measure.alias
+        ? { alias: measure.measure.alias }
+        : (measure.measure.title ? { alias: measure.measure.title } : {});
     const computeRatioProp = measure.measure.showInPercent ? { computeRatio: true } : {};
     const formatProp = measure.measure.showInPercent
         ? { format: '#,##0.00%' }
